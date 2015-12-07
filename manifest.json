@@ -1,0 +1,40 @@
+{
+	"manifest_version": 2,
+	"name": "Course hider for MyCourses",
+	"short_name": "MC Course Hider",
+	"description": "Because MyCourses is missing too obvious a feature...",
+	"version": "0.6",
+	"permissions": [
+		"background",
+		"tabs",
+		"storage",
+		"webNavigation"
+	],
+	"background": {
+    	"persistent": false,
+    	"scripts": ["js/background.js"]
+  	},
+	"icons": { 
+		"16": "img/ext_icon_16.png",
+		"48": "img/ext_icon_48.png",
+		"128": "img/ext_icon_128.png" 
+	},
+	"page_action": {
+		"default_icon": {                    
+			"19": "img/ext_icon_48.png",          
+			"38": "img/ext_icon_48.png"          
+		},
+		"default_popup": "courselist.html"
+	},
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	"web_accessible_resources": [
+		"img/icon128.png"
+	],
+	"content_scripts": [
+    {
+      "matches": ["https://mycourses.aalto.fi/*"],
+      "css": ["css/font-awesome/css/font-awesome.min.css","css/injector_override.css"],
+      "js": ["js/jquery-2.0.3.min.js","js/injector.js"]
+    }
+  ]
+}

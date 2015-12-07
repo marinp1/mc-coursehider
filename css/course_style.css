@@ -1,0 +1,80 @@
+/**
+ * Chrome Extension Twitter Bootstrap 3 Template
+ * Custom CSS
+ *	
+ */
+
+body {
+	width: 250px;
+	height: auto;
+	overflow-x: hidden;
+	max-height: 600px;
+}
+
+section {
+	height: auto;
+	overflow-x: hidden;
+	padding: 10px;
+}
+
+
+h4 {
+	text-align: left;
+	padding-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 0;
+	border-bottom: 1px solid #dadada;
+}
+
+#num_of_courses {
+	float: right;
+}
+
+.course {
+	min-height: 40px;
+	width: 100%;
+	padding: 8px;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #e1e1e1;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.remove {
+	width: 10%;
+	text-align: center;
+	float:right;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: #DC1010;
+	border-radius: 0px 3px 3px 0px;
+}
+
+.text {
+	width: 90%;
+	display: inline-block;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); }
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:window-inactive  { background: #949494; }
+
+.display-table {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.display-cell {
+	display: table-cell;
+	vertical-align: middle;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+}
