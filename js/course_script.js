@@ -23,6 +23,7 @@ function setDOMInfo(res) {
 
 		textdiv.setAttribute("class", "text");
 		removediv.setAttribute("class", "remove");
+    removediv.setAttribute("title", "Click to unhide.");
 		coursediv.setAttribute("class", "course");
 		coursediv.setAttribute("id", res[i].id);
 
