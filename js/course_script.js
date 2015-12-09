@@ -23,7 +23,7 @@ function setDOMInfo(res) {
 
 		textdiv.setAttribute("class", "text");
 		removediv.setAttribute("class", "remove");
-    removediv.setAttribute("title", "Click to unhide.");
+    removediv.setAttribute("title", "Click to unhide course.");
 		coursediv.setAttribute("class", "course");
 		coursediv.setAttribute("id", res[i].id);
 
@@ -31,6 +31,12 @@ function setDOMInfo(res) {
 		coursediv.appendChild(removediv)
 		lista.appendChild(coursediv);  
 	}
+  var sourceLink = document.createElement("a");
+  var sourceText = document.createTextNode("Source on GitHub");
+  sourceLink.appendChild(sourceText);
+  sourceLink.setAttribute("id", "source");
+  sourceLink.setAttribute("href", "https://github.com/marinp1/mc-coursehider");
+  lista.appendChild(sourceLink);
 }
 
 // Once the DOM is ready...
@@ -64,4 +70,10 @@ $(document).on('click','.remove',function(e){
         {from: 'courses', subject: 'update', data: datatosend},
         setDOMInfo);
   });
+});
+
+// Open GitHub link for the project.
+$(document).on('click', 'a', function(){
+ chrome.tabs.create({url: $(this).attr('href')});
+ return false;
 });

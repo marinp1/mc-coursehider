@@ -3,7 +3,7 @@
 	"name": "Course hider for MyCourses",
 	"short_name": "MC Course Hider",
 	"description": "Because MyCourses is missing too obvious a feature...",
-	"version": "0.6",
+	"version": "0.65",
 	"permissions": [
 		"background",
 		"tabs",
@@ -14,15 +14,15 @@
     	"persistent": false,
     	"scripts": ["js/background.js"]
   	},
-	"icons": { 
+	"icons": {
 		"16": "img/ext_icon_16.png",
 		"48": "img/ext_icon_48.png",
-		"128": "img/ext_icon_128.png" 
+		"128": "img/ext_icon_128.png"
 	},
 	"page_action": {
-		"default_icon": {                    
-			"19": "img/ext_icon_48.png",          
-			"38": "img/ext_icon_48.png"          
+		"default_icon": {
+			"19": "img/ext_icon_48.png",
+			"38": "img/ext_icon_48.png"
 		},
 		"default_popup": "courselist.html"
 	},
