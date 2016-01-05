@@ -18,7 +18,7 @@ if (document.title.startsWith("MyCourses:")) {
 		var h6 = document.createElement("i");
 		h6.setAttribute("style", "font-size: 1.2rem");
 		h6.setAttribute("class", "fa fa-eye-slash");
-		div.setAttribute("title", "Click to hide course from list.")
+		div.setAttribute("title", "Click to hide course from list")
 		div.setAttribute("class", "mc-ext-remover");
 		div.appendChild(h6)
 		elements[i].insertBefore(div, insBef);

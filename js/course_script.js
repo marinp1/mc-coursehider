@@ -9,8 +9,11 @@ function setDOMInfo(res) {
 		var coursediv = document.createElement("div");
 		var textdiv = document.createElement("div");
 		var removediv = document.createElement("div");
+    var anchortag = document.createElement("a");
 		var t = document.createTextNode(res[i].name);
-		textdiv.appendChild(t);
+    anchortag.setAttribute("href", "https://mycourses.aalto.fi/course/view.php?id=" + res[i].id.split("course-")[1]);
+    anchortag.appendChild(t);
+		textdiv.appendChild(anchortag);
 
     var table= document.createElement("div");
     table.setAttribute("class", "display-table");
@@ -23,13 +26,13 @@ function setDOMInfo(res) {
 
 		textdiv.setAttribute("class", "text");
 		removediv.setAttribute("class", "remove");
-    removediv.setAttribute("title", "Click to unhide course.");
+    removediv.setAttribute("title", "Click to unhide course");
 		coursediv.setAttribute("class", "course");
 		coursediv.setAttribute("id", res[i].id);
 
 		coursediv.appendChild(textdiv)
 		coursediv.appendChild(removediv)
-		lista.appendChild(coursediv);  
+		lista.appendChild(coursediv);
 	}
   var sourceLink = document.createElement("a");
   var sourceText = document.createTextNode("Source on GitHub");
@@ -49,7 +52,7 @@ window.addEventListener('DOMContentLoaded', function () {
     chrome.tabs.sendMessage(
         tabs[0].id,
         {from: 'courses', subject: 'DOMInfo'},
-        // ...also specifying a callback to be called 
+        // ...also specifying a callback to be called
         //    from the receiving end (content script)
         setDOMInfo);
   });
